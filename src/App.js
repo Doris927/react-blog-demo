@@ -102,10 +102,12 @@ class App extends Component{
                             <Button><Link to="/about">About</Link></Button>
                         </Toolbar>
                     </AppBar>
-                    <Route exact path="/" component={Home}/>
-                    <Route exact path="/about" component={About}/>
-                    <Route exact path="/demo" component={Demo}/>
-                    <Route exact path="/blog" component={Blog}/>
+                    <Switch>
+                        <Route exact path="/" component={Home}/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/demo" component={Demo}/>
+                        <Route path="/blog" component={Blog}/>
+                    </Switch>
                     {/* Footer */}
                     <footer className={classes.footer}>
                         <Typography variant="h6" align="center" gutterBottom>
