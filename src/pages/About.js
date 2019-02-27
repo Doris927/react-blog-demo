@@ -1,8 +1,11 @@
 import React from 'react';
+import {view as TimeLine} from '../components/timeline';
 
 const About = () =>{
     return (
-        <div>About</div>
+        <div>About
+            <TimeLine/>
+        </div>
     );
 }
 
