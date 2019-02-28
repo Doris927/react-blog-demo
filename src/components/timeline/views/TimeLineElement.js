@@ -8,7 +8,7 @@ class TimeLineElement extends Component{
        return(
         <div className="cd-timeline-block">
             <div className="cd-timeline-img cd-picture">
-                <img src="/imgs/time_fill.png" alt="Picture"/>
+                <img src="http://i2.bvimg.com/678757/485f5abad5a3ceac.png" alt="Picture"/>
             </div>
             <div className="cd-timeline-content">
                 <h2>{title}</h2>
