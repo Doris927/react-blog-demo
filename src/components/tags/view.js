@@ -74,7 +74,7 @@ class Tags extends Component{
                     <div style={{...contenStyles}}>
                         {
                             tags.map((item) => (
-                                <button style={{...btnStyle,...item.style}}>{item.tag}</button>
+                                <button key={item.tag} style={{...btnStyle,...item.style}}>{item.tag}</button>
                             ))
                         }
                     </div>

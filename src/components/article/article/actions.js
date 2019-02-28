@@ -17,7 +17,7 @@ export const fetchArticleFailure = (error) => ({
 export const fetchArticle = (id) => {
     return (dispatch) => {
         //const apiUrl = `/data/page${page}.json`;
-        const apiUrl = `../issues/${id}`;
+        const apiUrl = `https://api.github.com/repos/tammytangg/react-blog-demo/issues/${id}`;
 
         dispatch(fetchArticleStarted());
 

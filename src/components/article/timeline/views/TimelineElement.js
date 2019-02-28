@@ -20,9 +20,9 @@ class VerticalTimelineElement extends Component {
         const {name, time, content} = this.props;
         return(
             <div>
-                <img src='../imgs/avatar.jpeg' class="avatar"/>
-                <div class="blogs">
-                        <div class="bloglist">
+                <img src='./imgs/avatar.jpeg' className="avatar"/>
+                <div className="blogs">
+                        <div className="bloglist">
                             <Paper className={classes.comment}>
                                 <Typography>
                                     {name}<span>{time}</span>
@@ -34,7 +34,7 @@ class VerticalTimelineElement extends Component {
                             </Paper>
                         </div>
                 </div>
-                <div class="clear"></div>
+                <div className="clear"></div>
             </div>
 
         );
