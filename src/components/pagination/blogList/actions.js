@@ -17,7 +17,7 @@ export const fetchBlogFailure = (error) => ({
 export const fetchBlog = (page) => {
     return (dispatch) => {
         //const apiUrl = `/data/page${page}.json`;
-        const apiUrl = `../blogs?page=${page}&limit=5`;
+        const apiUrl = `../issues?page=${page}&per_page=5`;
 
         dispatch(fetchBlogStarted())
 

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactMarkdown from 'markdown-to-jsx';
+import Paper from '@material-ui/core/Paper';
 import * as Status from './status';
 import * as actions from './actions'
 
@@ -20,8 +22,13 @@ class Article extends Component{
             case Status.LOADING:
                 return <div>Article Loading...</div>;
             case Status.SUCCESS:
-                const{id} = this.props.article;
-                return(<div>{id}</div>);
+                const{number} = this.props.article;
+                const{body} = this.props.article;
+                return(
+                    <Paper>
+                        <ReactMarkdown>{body}</ReactMarkdown>
+                    </Paper>
+                );
             case Status.FAILURE:
                 return <div>Load Failure!</div>;
             default:{

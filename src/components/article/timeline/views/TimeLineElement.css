@@ -1,0 +1,8 @@
+.avatar{float: left;width: 8%;margin-top:10px }
+.blogs { width: 82.3%; padding-bottom: 30px;margin-left: 5%;position: relative; float: left;}
+.blogs::before { content: ""; width: 2px; height: 100%; top: 0; bottom: 0; left: -2.5%; background: #868686; position: absolute } /* 右侧的黑色竖轴线 */
+.bloglist {width: 100%; color: #b9b9b9; border-radius: 6px;margin-top: 10px;padding-top: 0px }
+.bloglist::before { content: ""; width: 1.8%; height: 0%;padding-bottom: 1.8%; border-radius: 50%; position: absolute; left: -3.3%; top: 10px; background: #434343; border: 1px solid #434343; z-index: 10; }/* 圆形 */
+.bloglist:hover::before { border-color: #ccc; }/* 鼠标放上去 圆形边框变色 */
+.clear{clear: both }
+h2{margin: 0px;}

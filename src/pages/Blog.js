@@ -17,6 +17,8 @@ import Divider from '@material-ui/core/Divider';
 import {Route, Switch,Link} from 'react-router-dom';
 import BlogPages from '../components/pagination'
 import {view as Article} from '../components/article/article';
+//import CommentList from '../components/article/comments/views/commentList';
+import CommentTimeLine from '../components/article/timeline/views/CommentTimeline';
 
 const styles = theme => ({
     layout: {
@@ -111,6 +113,7 @@ class Blog extends Component{
                         <Divider />
                         <Route exact path={`${this.props.match.url}/`} component={BlogPages} />
                         <Route path={`${this.props.match.url}/:id`} component={Article} />
+                        <CommentTimeLine/>
                     </Grid>
                     {/* End main content */}
                     {/* Sidebar */}
@@ -139,8 +142,8 @@ class Blog extends Component{
                     </Grid>
                     {/* End sidebar */}
 
-
                 </Grid>
+
             </div>
         );
     }

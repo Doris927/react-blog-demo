@@ -24,6 +24,8 @@ const styles = theme => ({
     },
     appBar: {
         position: 'relative',
+        backgroundColor:'#009966',
+        backgroundColor:'rgba(0,153,102,0.9)'
     },
     toolbarTitle: {
         flex: 1,
@@ -63,6 +65,21 @@ const styles = theme => ({
         marginTop: theme.spacing.unit * 5,
         padding: `${theme.spacing.unit * 6}px 0`,
     },
+    link:{
+        textDecoration:'none',
+        color:'white'
+    },
+    maincontainer:{
+        background: '#444 url(imgs/background.JPG)',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize:'cover',
+        backgroundPosition: 'center center',
+        width:'100%'
+    },
+    container:{
+        backgroundColor:'#FFFFFF',
+        backgroundColor:'rgba(255,255,255,0.5)'
+    }
 });
 
 const footers = [
@@ -90,34 +107,36 @@ class App extends Component{
         const {classes} = this.props;
         return(
             <BrowserRouter>
-                <div>
-                    <AppBar position="static" color="default" className={classes.appBar}>
-                        <Toolbar>
-                            <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-                                Tammy
+                <div className={classes.maincontainer}>
+                    <div className={classes.container}>
+                        <AppBar position="static"  className={classes.appBar}>
+                            <Toolbar>
+                                <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
+                                    Tammy
+                                </Typography>
+                                <Button><Link to="/" className={classes.link}>Home</Link></Button>
+                                <Button><Link to="/blog" className={classes.link}>Blog</Link></Button>
+                                <Button><Link to="/demo" className={classes.link}>Demo</Link></Button>
+                                <Button><Link to="/about" className={classes.link}>About</Link></Button>
+                            </Toolbar>
+                        </AppBar>
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <Route path="/about" component={About}/>
+                            <Route path="/demo" component={Demo}/>
+                            <Route path="/blog" component={Blog}/>
+                        </Switch>
+                        {/* Footer */}
+                        <footer className={classes.footer}>
+                            <Typography variant="h6" align="center" gutterBottom>
+                                Bulit by Tammy
                             </Typography>
-                            <Button><Link to="/">Home</Link></Button>
-                            <Button><Link to="/blog">Blog</Link></Button>
-                            <Button><Link to="/demo">Demo</Link></Button>
-                            <Button><Link to="/about">About</Link></Button>
-                        </Toolbar>
-                    </AppBar>
-                    <Switch>
-                        <Route exact path="/" component={Home}/>
-                        <Route path="/about" component={About}/>
-                        <Route path="/demo" component={Demo}/>
-                        <Route path="/blog" component={Blog}/>
-                    </Switch>
-                    {/* Footer */}
-                    <footer className={classes.footer}>
-                        <Typography variant="h6" align="center" gutterBottom>
-                            Bulit by Tammy
-                        </Typography>
-                        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                            tammytangg@gmail.com
-                        </Typography>
-                    </footer>
-                    {/* End footer */}
+                            <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+                                tammytangg@gmail.com
+                            </Typography>
+                        </footer>
+                        {/* End footer */}
+                    </div>
                 </div>
             </BrowserRouter>
         );

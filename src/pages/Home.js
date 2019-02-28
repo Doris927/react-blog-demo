@@ -58,7 +58,6 @@ const styles = theme => ({
     },
     footer: {
         marginTop: theme.spacing.unit * 8,
-        borderTop: `1px solid ${theme.palette.divider}`,
         padding: `${theme.spacing.unit * 6}px 0`,
     },
     avatarImg:{
@@ -74,6 +73,41 @@ const styles = theme => ({
     introduction:{
         marginTop:theme.spacing.unit * 2,
         marginBottom:theme.spacing.unit * 2
+    },
+    mycard:{
+
+    },
+    cardtitle:{
+        background:'#ec6f62',
+        height:'4rem',
+        backgroundColor:'rgba(255,102,102,0.9)',
+        color:'white',
+        fontSize:'2rem',
+        lineHeight:'4rem',
+        textAlign:'center'
+    },
+    cardtitle2:{
+        background:'#5f8aff',
+        height:'4rem',
+        backgroundColor:'rgba(95,138,255,0.9)',
+        color:'white',
+        fontSize:'2rem',
+        lineHeight:'4rem',
+        textAlign:'center'
+    },
+    cardtitle3:{
+        background:'#99CC33',
+        height:'4rem',
+        backgroundColor:'rgba(153,199,51,0.9)',
+        color:'white',
+        fontSize:'2rem',
+        lineHeight:'4rem',
+        textAlign:'center'
+    },
+    cardcontent:{
+        background:'#ffffff',
+        height:'10rem',
+        backgroundColor:'rgba(255,255,255,0.9)'
     }
 });
 
@@ -93,68 +127,48 @@ class Home extends Component{
                             Tang Chenmin
                         </Typography>
                         <Typography variant="h6" align="center" color="textSecondary" component="p">
-                            A beginner&apos;s built with default Material-UI components with little customization.
+                            Yesterday is history , tomorrow is a mistery.
+                            <br/>But today is a <b>gift</b> , that is why it is called the present.
                         </Typography>
                     </div>
 
                 </div>
                 <Grid container spacing={40} alignItems="flex-end">
                     <Grid item xs={12} sm={6} md={4}>
-                        <Card>
-                            <CardHeader
-                                title="Blog"
-                                titleTypographyProps={{ align: 'center' }}
-                                className={classes.cardHeader}
-                            />
-                            <CardContent>
+                        <div className={classes.mycard}>
+                            <div className={classes.cardtitle}>
+                                BLOG
+                            </div>
+                            <div className={classes.cardcontent}>
                                 <Typography variant="subtitle1" align="center">
                                     test
                                 </Typography>
-                            </CardContent>
-                            <CardActions className={classes.cardActions}>
-                                <Button fullWidth color="primary">
-                                    test
-                                </Button>
-                            </CardActions>
-                        </Card>
+                            </div>
+                        </div>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Card>
-                            <CardHeader
-                                title="Demo"
-                                titleTypographyProps={{ align: 'center' }}
-                                className={classes.cardHeader}
-                            />
-                            <CardContent>
+                        <div className={classes.mycard}>
+                            <div className={classes.cardtitle2}>
+                                DEMO
+                            </div>
+                            <div className={classes.cardcontent}>
                                 <Typography variant="subtitle1" align="center">
                                     test
                                 </Typography>
-                            </CardContent>
-                            <CardActions className={classes.cardActions}>
-                                <Button fullWidth color="primary">
-                                    test
-                                </Button>
-                            </CardActions>
-                        </Card>
+                            </div>
+                        </div>
                     </Grid>
                     <Grid item xs={12} sm={6} md={4}>
-                        <Card>
-                            <CardHeader
-                                title="Blog"
-                                titleTypographyProps={{ align: 'center' }}
-                                className={classes.cardHeader}
-                            />
-                            <CardContent>
+                        <div className={classes.mycard}>
+                            <div className={classes.cardtitle3}>
+                                ABOUT
+                            </div>
+                            <div className={classes.cardcontent}>
                                 <Typography variant="subtitle1" align="center">
                                     test
                                 </Typography>
-                            </CardContent>
-                            <CardActions className={classes.cardActions}>
-                                <Button fullWidth color="primary">
-                                    test
-                                </Button>
-                            </CardActions>
-                        </Card>
+                            </div>
+                        </div>
                     </Grid>
                 </Grid>
             </div>
