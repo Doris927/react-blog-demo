@@ -62,7 +62,7 @@ const styles = theme => ({
         color:'white'
     },
     maincontainer:{
-        background: '#444 url(imgs/background.JPG)',
+        background: '#444 url(imgs/background.jpg)',
         backgroundRepeat: 'no-repeat',
         backgroundSize:'cover',
         backgroundPosition: 'center center',
