@@ -16,6 +16,12 @@ html * {
     img {
     max-width: 100%;
     }
+
+    /* a{
+        z-index: 10;
+    } */
+
+
     /* -------------------------------- 
     Modules - reusable parts of our design
     -------------------------------- */
@@ -211,7 +217,7 @@ html * {
     top: 24px;
     left: 100%;
     border-color: transparent;
-    border-left-color: white;
+    border-left-color: rgb(245, 173, 173);
     }
     .cd-timeline-content .cd-read-more {
     float: left;
@@ -232,7 +238,7 @@ html * {
     left: auto;
     right: 100%;
     border-color: transparent;
-    border-right-color: white;
+    border-right-color: rgb(245, 173, 173);
     }
     .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
     float: right;

@@ -6,19 +6,19 @@ const dummyData = [
     {
         id:1,
         time:'2018-09-01',
-        titile:'title',
+        title:'title',
         content:'content'
     },
     {
-        id:1,
+        id:2,
         time:'2018-09-01',
-        titile:'title',
+        title:'title',
         content:'content'
     },
     {
-        id:1,
+        id:3,
         time:'2018-09-01',
-        titile:'title',
+        title:'title',
         content:'content'
     }
 ];
@@ -26,7 +26,7 @@ const dummyData = [
 class TimeLine extends Component{
     render(){
         return(
-            <section id="cd-timeline" class="cd-container">
+            <section id="cd-timeline" className="cd-container">
                  {dummyData.map(
                             (item) => (
                                 <TimeLineElement key={item.id} {...item}></TimeLineElement>
