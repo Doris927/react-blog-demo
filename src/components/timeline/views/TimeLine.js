@@ -23,7 +23,7 @@ const dummyData = [
         time:'2016.8 ~ 2016.9',
         title:'IOS: Socialアプリ',
         content:'コンテストを参加するため、このアプリを開発しました。メイン機能は、自分がやりたいことを発送した後、システム上で似てる内容を発送したユーザを探してくれて、連絡方式を交換できます。',
-        github:''
+        github:'https://github.com/manaba/Todo'
     },
     {
         id:4,
@@ -36,35 +36,34 @@ const dummyData = [
         id:5,
         time:'2015.5 ~ 2015.8',
         title:'Web：Online Test System',
-        content:'Freelancerみたいのサイトで探したアルバイトです。教育業界ベンチャーのため開発した。\n問題集\n' +
+        content:'Freelancerみたいのサイトで探したアルバイトです。教育業界ベンチャーのため開発した。問題集:' +
         '問題導入（Wordで、web画面で）、問題編集、問題サーチ\n' +
-        'オンラインテスト\n' +
-        'テスト作成、オンラインテスト、テスト後の採点など\nFront-end: HTML, CSS, JS\n' +
-        'サーバー：　Java, Springboot\n',
+        'オンラインテスト:' +
+        'テスト作成、オンラインテスト、テスト後の採点などの機能を実装した。\nFront-end: HTML, CSS, JS。\n' +
+        'サーバー：　Java, Springboot。\n',
         github:"https://github.com/tammytangg/OnlineTestSystem"
     },
     {
         id:6,
         time:'2014.12~2015.2',
         title:'Software: 社内チャットツール',
-        content:'Windows側のクライエントソフトウェアを開発 \n' +
-        'サーバー側部分機能\n' +
-        'ファイル共有機能、スタンプ機能、グループ公告機能\nクライエント側: C++、QT\n' +
-        'サーバー：　Java、OpenFire(XMPPに基づく)\n',
-        github:''
+        content:'Windows側のクライエントソフトウェアを開発して、' +
+        'サーバー側部分機能：ファイル共有機能、スタンプ機能、グループ公告機能を実装した。クライエント側: C++、QTで実装した。'+
+        'サーバーは、Java、OpenFire(XMPPに基づく)で実装した。',
+        github:'#'
     },
     {
         id:8,
         time:'2014.6 ~ 2014.9',
         title:'Software: 車両ナンバー識別ソフトウェア',
         content:'コンテストを参加するため、このVRスマホンゲームを開発しました。京都から逃げるのゲームです。',
-        github:"https://github.com/tammytangg/SmackGame"
+        github:"#"
     },
     {
         id:9,
         time:'2014.2',
         title:'スマホンゲーム: Smack That Gug',
-        content:'コンテストを参加するため、このVRスマホンゲームを開発しました。京都から逃げるのゲームです。',
+        content:'Gugを潰すスマホンゲームです。',
         github:"https://github.com/tammytangg/SmackGame"
     },
 ];

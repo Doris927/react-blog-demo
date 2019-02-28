@@ -120,11 +120,8 @@ class App extends Component{
                         </Switch>
                         {/* Footer */}
                         <footer className={classes.footer}>
-                            <Typography variant="h6" align="center" gutterBottom>
-                                Bulit by Tammy
-                            </Typography>
                             <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                                tammytangg@gmail.com
+                                @Tammy
                             </Typography>
                         </footer>
                         {/* End footer */}

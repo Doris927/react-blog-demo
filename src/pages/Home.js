@@ -61,7 +61,7 @@ const styles = theme => ({
         padding: `${theme.spacing.unit * 6}px 0`,
     },
     avatarImg:{
-        background: '#444 url(/imgs/me.JPG)',
+        background: '#444 url(imgs/me.JPG)',
         backgroundRepeat: 'no-repeat',
         backgroundSize:'cover',
         backgroundPosition: 'center center',
@@ -133,44 +133,44 @@ class Home extends Component{
                     </div>
 
                 </div>
-                <Grid container spacing={40} alignItems="flex-end">
-                    <Grid item xs={12} sm={6} md={4}>
-                        <div className={classes.mycard}>
-                            <div className={classes.cardtitle}>
-                                BLOG
-                            </div>
-                            <div className={classes.cardcontent}>
-                                <Typography variant="subtitle1" align="center">
-                                    test
-                                </Typography>
-                            </div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={4}>
-                        <div className={classes.mycard}>
-                            <div className={classes.cardtitle2}>
-                                DEMO
-                            </div>
-                            <div className={classes.cardcontent}>
-                                <Typography variant="subtitle1" align="center">
-                                    test
-                                </Typography>
-                            </div>
-                        </div>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={4}>
-                        <div className={classes.mycard}>
-                            <div className={classes.cardtitle3}>
-                                ABOUT
-                            </div>
-                            <div className={classes.cardcontent}>
-                                <Typography variant="subtitle1" align="center">
-                                    test
-                                </Typography>
-                            </div>
-                        </div>
-                    </Grid>
-                </Grid>
+                {/*<Grid container spacing={40} alignItems="flex-end">*/}
+                    {/*<Grid item xs={12} sm={6} md={4}>*/}
+                        {/*<div className={classes.mycard}>*/}
+                            {/*<div className={classes.cardtitle}>*/}
+                                {/*BLOG*/}
+                            {/*</div>*/}
+                            {/*<div className={classes.cardcontent}>*/}
+                                {/*<Typography variant="subtitle1" align="center">*/}
+                                    {/*test*/}
+                                {/*</Typography>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</Grid>*/}
+                    {/*<Grid item xs={12} sm={6} md={4}>*/}
+                        {/*<div className={classes.mycard}>*/}
+                            {/*<div className={classes.cardtitle2}>*/}
+                                {/*DEMO*/}
+                            {/*</div>*/}
+                            {/*<div className={classes.cardcontent}>*/}
+                                {/*<Typography variant="subtitle1" align="center">*/}
+                                    {/*test*/}
+                                {/*</Typography>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</Grid>*/}
+                    {/*<Grid item xs={12} sm={6} md={4}>*/}
+                        {/*<div className={classes.mycard}>*/}
+                            {/*<div className={classes.cardtitle3}>*/}
+                                {/*ABOUT*/}
+                            {/*</div>*/}
+                            {/*<div className={classes.cardcontent}>*/}
+                                {/*<Typography variant="subtitle1" align="center">*/}
+                                    {/*test*/}
+                                {/*</Typography>*/}
+                            {/*</div>*/}
+                        {/*</div>*/}
+                    {/*</Grid>*/}
+                {/*</Grid>*/}
             </div>
 
         );

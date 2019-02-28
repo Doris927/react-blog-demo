@@ -81,7 +81,7 @@ const About = () =>{
                             <div className="item">
                                 <header className="item-hd">
                                     <span className="item-time">2019.02 ~ 現在</span>
-                                    <a className="btn item-more" href="#" target="_blank">Link</a>
+                                    <a className="btn item-more" href="https://github.com/tammytangg/react-blog-demo" target="_blank">Link</a>
                                     <h3 className="item-name">個人Blog
                                     </h3>
                                 </header>
@@ -94,7 +94,7 @@ const About = () =>{
                             <div className="item">
                                 <header className="item-hd">
                                     <span className="item-time">2017.4 ~ 2017.7</span>
-                                    <a className="btn item-more" href="#" target="_blank">Link</a>
+                                    <a className="btn item-more" href="https://github.com/tammytangg/HappyPai2" target="_blank">Link</a>
                                     <h3 className="item-name">Android：カメラアプリ</h3>
                                 </header>
                                 <div className="item-bd">
@@ -107,7 +107,7 @@ const About = () =>{
                             <div className="item">
                                 <header className="item-hd">
                                     <span className="item-time">2015.5 ~ 2015.8</span>
-                                    <a className="btn item-more" href="#" target="_blank">Link</a>
+                                    <a className="btn item-more" href="https://github.com/tammytangg/OnlineTestSystem" target="_blank">Link</a>
                                     <h3 className="item-name">オンラインテストシステム</h3>
                                 </header>
                                 <div className="item-bd">
@@ -119,7 +119,6 @@ const About = () =>{
                             <div className="item">
                                 <header className="item-hd">
                                     <span className="item-time">2014.12 ~ 2015.2</span>
-                                    <a className="btn item-more" href="#" target="_blank">Link</a>
                                     <h3 className="item-name">社内チャットツール</h3>
                                 </header>
                                 <div className="item-bd">
@@ -227,7 +226,7 @@ const About = () =>{
                 <header className="content-right content-hd">
 
                     <section className="title">
-                        <img className="avator" src="./imgs/tangchenmin.jpg"/>
+                        <img className="avator" src="imgs/tangchenmin.jpg"/>
                             <div className="name">
                                 <h1>湯 晨旻</h1>
                             </div>
@@ -241,6 +240,10 @@ const About = () =>{
                     </section>
 
                     <section className="skill-level">
+                        <div style={{textAlign:'center'}}>
+                            <h2>勉強中...</h2>
+                        </div>
+
                         <h3>HTML</h3>
                         <div className="item i-html">
                             <i className="in"></i><i className="out"></i>

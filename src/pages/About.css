@@ -277,10 +277,10 @@ a {
     border-radius: 0 6px 6px 0;
 }
 .content-hd .skill-level .i-html .in {
-    flex: 2;
+    flex: 1.5;
 }
 .content-hd .skill-level .i-html .out {
-    flex: 2;
+    flex: 3;
 }
 .content-hd .skill-level .i-css .in {
     flex: 1;
@@ -289,7 +289,7 @@ a {
     flex: 3;
 }
 .content-hd .skill-level .i-js .in {
-    flex: 3;
+    flex: 1.5;
 }
 .content-hd .skill-level .i-js .out {
     flex: 3.5;
@@ -301,7 +301,7 @@ a {
     flex: 4;
 }
 .content-hd .skill-level .i-java .in {
-    flex: 3;
+    flex: 2;
 }
 .content-hd .skill-level .i-java .out {
     flex: 2.5;
