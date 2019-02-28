@@ -227,7 +227,7 @@ const About = () =>{
                 <header className="content-right content-hd">
 
                     <section className="title">
-                        <img className="avator" src="/imgs/tangchenmin.jpg"/>
+                        <img className="avator" src="./imgs/tangchenmin.jpg"/>
                             <div className="name">
                                 <h1>湯 晨旻</h1>
                             </div>

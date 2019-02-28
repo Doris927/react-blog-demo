@@ -61,7 +61,7 @@ const styles = theme => ({
         padding: `${theme.spacing.unit * 6}px 0`,
     },
     avatarImg:{
-        background: '#444 url(./imgs/me.JPG)',
+        background: '#444 url(/imgs/me.JPG)',
         backgroundRepeat: 'no-repeat',
         backgroundSize:'cover',
         backgroundPosition: 'center center',
