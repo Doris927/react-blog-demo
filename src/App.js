@@ -62,7 +62,7 @@ const styles = theme => ({
         color:'white'
     },
     maincontainer:{
-        background: '#444 url(imgs/background.jpg)',
+        background: '#444 url("http://i2.bvimg.com/678757/d9a88d3e97533c6e.jpg")',
         backgroundRepeat: 'no-repeat',
         backgroundSize:'cover',
         backgroundPosition: 'center center',
