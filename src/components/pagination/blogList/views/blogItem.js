@@ -22,7 +22,10 @@ const styles = theme => ({
         marginLeft:theme.spacing.unit * 1
     },
     card: {
-        marginBottom:theme.spacing.unit *3
+        marginBottom:theme.spacing.unit *3,
+        backgroundColor:'#FFFFFF',
+        backgroundColor:'rgb(255,255,255,0.9)',
+        boxShadow: "0 0 5px #c0c0c0"
     },
     cardDetails: {
         flex: 1,
@@ -48,21 +51,18 @@ class BlogItem extends Component{
     }
 
     render(){
-        const {title, createdAt, content} = this.props;
+        const {title, createdAt, body} = this.props;
         const { classes } = this.props;
         return(
-            <Card className={classes.card}>
+            <div className={classes.card}>
                 <CardActionArea>
                     <CardHeader
                         title={title}
                         subheader={createdAt}
                     />
-
                     <CardContent>
-
-
                         <Typography component="p">
-                            {content}
+                            {body}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -75,7 +75,7 @@ class BlogItem extends Component{
                         Share
                     </Button>
                 </CardActions>
-            </Card>
+            </div>
 
         );
     };

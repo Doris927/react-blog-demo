@@ -21,7 +21,7 @@ class BlogList extends Component{
         const {classes} = this.props;
         switch (status){
             case Status.LOADING:
-                return <div>天气信息请求中...</div>;
+                return <div>Loading...</div>;
             case Status.SUCCESS:
                 const{blogs} = this.props;
                 console.log(blogs);
@@ -35,7 +35,7 @@ class BlogList extends Component{
                     </ul>
                 );
             case Status.FAILURE:
-                return <div>天气信息装载失败</div>;
+                return <div>Failure</div>;
             default:{
                 throw new Error('unexpected status ' + status);
             }

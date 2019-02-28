@@ -5,22 +5,68 @@ require('./TimeLine.css');
 const dummyData = [
     {
         id:1,
-        time:'2018-09-01',
-        title:'title',
-        content:'content'
+        time:'2019.2 ~ Now',
+        title:'Web: 個人Blog',
+        content:"Reactを利用して、個人Blogを開発しました。\n ReduxでStateを管理していて、Github IssuesのApiを利用されています。",
+        github:"https://github.com/tammytangg/react-blog-demo"
     },
     {
         id:2,
-        time:'2018-09-01',
-        title:'title',
-        content:'content'
+        time:'2017.3 ~ 2017.6',
+        title:'Android: カメラアプリ',
+        content:'写真を撮ることを人を頼む時、どんな写真を取りたいか伝えるため、作成したAndoridアプリ。自分の社員を他の利用者と共有できます。' +
+        'クライエント側はJavaで開発していて、サーバ側はPHPで実装しました。',
+        github:"https://github.com/tammytangg/HappyPai2"
     },
     {
         id:3,
-        time:'2018-09-01',
-        title:'title',
-        content:'content'
-    }
+        time:'2016.8 ~ 2016.9',
+        title:'IOS: Socialアプリ',
+        content:'コンテストを参加するため、このアプリを開発しました。メイン機能は、自分がやりたいことを発送した後、システム上で似てる内容を発送したユーザを探してくれて、連絡方式を交換できます。',
+        github:''
+    },
+    {
+        id:4,
+        time:'2016.2',
+        title:'スマホンゲーム: Kyoto Run',
+        content:'コンテストを参加するため、このVRスマホンゲームを開発しました。京都から逃げるのゲームです。',
+        github:"https://github.com/tammytangg/EscapeKyotoVR"
+    },
+    {
+        id:5,
+        time:'2015.5 ~ 2015.8',
+        title:'Web：Online Test System',
+        content:'Freelancerみたいのサイトで探したアルバイトです。教育業界ベンチャーのため開発した。\n問題集\n' +
+        '問題導入（Wordで、web画面で）、問題編集、問題サーチ\n' +
+        'オンラインテスト\n' +
+        'テスト作成、オンラインテスト、テスト後の採点など\nFront-end: HTML, CSS, JS\n' +
+        'サーバー：　Java, Springboot\n',
+        github:"https://github.com/tammytangg/OnlineTestSystem"
+    },
+    {
+        id:6,
+        time:'2014.12~2015.2',
+        title:'Software: 社内チャットツール',
+        content:'Windows側のクライエントソフトウェアを開発 \n' +
+        'サーバー側部分機能\n' +
+        'ファイル共有機能、スタンプ機能、グループ公告機能\nクライエント側: C++、QT\n' +
+        'サーバー：　Java、OpenFire(XMPPに基づく)\n',
+        github:''
+    },
+    {
+        id:8,
+        time:'2014.6 ~ 2014.9',
+        title:'Software: 車両ナンバー識別ソフトウェア',
+        content:'コンテストを参加するため、このVRスマホンゲームを開発しました。京都から逃げるのゲームです。',
+        github:"https://github.com/tammytangg/SmackGame"
+    },
+    {
+        id:9,
+        time:'2014.2',
+        title:'スマホンゲーム: Smack That Gug',
+        content:'コンテストを参加するため、このVRスマホンゲームを開発しました。京都から逃げるのゲームです。',
+        github:"https://github.com/tammytangg/SmackGame"
+    },
 ];
 
 class TimeLine extends Component{

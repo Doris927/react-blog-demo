@@ -9,6 +9,8 @@ import {Fab, Toolbar} from "@material-ui/core";
 import Icon from '@material-ui/core/Icon';
 import red from "@material-ui/core/colors/red";
 
+require('./view.css');
+
 
 const styles = theme => ({
     leftButton: {
@@ -62,22 +64,22 @@ class PageSelector extends React.Component {
             <Toolbar className={classes.toolbarMy}>
                 <div>
                     {
-                        <Fab key="prev" color="primary" label="上一页"
-                             disabled={current <= 1} className={classes.leftButton}
-                             onClick={this.setUp} size='small'>
-                            <Icon>keyboard_arrow_left</Icon>
-                        </Fab>
+                        <button key="prev"  label="上一页"
+                             disabled={current <= 1} className="page-btn"
+                             onClick={this.setUp}>
+                            Last
+                        </button>
                     }
                     {
-                        `Page ${current} of ${amountPage}`
+                        <button key="next"  label="下一页"
+                             disabled={current === amountPage}  className="page-btn"
+                             onClick={this.setNext}>
+                            Next
+                        </button>
                     }
-                    {
-                        <Fab key="next" color="primary"  label="下一页"
-                             disabled={current === amountPage}  className={classes.rightButton}
-                             onClick={this.setNext} size='small'>
-                            <Icon>keyboard_arrow_right</Icon>
-                        </Fab>
-                    }
+                    <span style={{color:'black'}}>
+                        Page {current} of {amountPage}
+                    </span>
                 </div>
                 {/*<button onClick={this.setUp}>Last</button>*/}
                 {/*<button onClick={this.setNext}>Next</button>*/}

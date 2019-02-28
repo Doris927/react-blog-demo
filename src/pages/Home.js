@@ -78,27 +78,27 @@ const styles = theme => ({
 
     },
     cardtitle:{
-        background:'#ec6f62',
+        background:'#00aa76',
         height:'4rem',
-        backgroundColor:'rgba(255,102,102,0.9)',
+        backgroundColor:'rgba(0,170,118,0.9)',
         color:'white',
         fontSize:'2rem',
         lineHeight:'4rem',
         textAlign:'center'
     },
     cardtitle2:{
-        background:'#5f8aff',
+        background:'#00aa76',
         height:'4rem',
-        backgroundColor:'rgba(95,138,255,0.9)',
+        backgroundColor:'rgba(0,170,118,0.9)',
         color:'white',
         fontSize:'2rem',
         lineHeight:'4rem',
         textAlign:'center'
     },
     cardtitle3:{
-        background:'#99CC33',
+        background:'#00aa76',
         height:'4rem',
-        backgroundColor:'rgba(153,199,51,0.9)',
+        backgroundColor:'rgba(0,170,118,0.9)',
         color:'white',
         fontSize:'2rem',
         lineHeight:'4rem',
