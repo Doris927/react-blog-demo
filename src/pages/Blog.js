@@ -20,6 +20,7 @@ import {view as Article} from '../components/article/article';
 //import CommentList from '../components/article/comments/views/commentList';
 import CommentTimeLine from '../components/article/timeline/views/CommentTimeline';
 import Tags from '../components/tags/view'
+import Archives from '../components/Archives/view'
 
 const styles = theme => ({
     layout: {
@@ -117,6 +118,7 @@ class Blog extends Component{
                     {/* Sidebar */}
                     <Grid item xs={12} md={4}>
                         <Tags/>
+                        <Archives/>
                     </Grid>
                     {/* End sidebar */}
 
