@@ -44,7 +44,7 @@ class BlogList extends Component{
     }
 }
 
-const mapStateTopProps = (state) => {
+const mapStateToProps = (state) => {
     const blogs = state.blogList;
     //console.log(state);
 
@@ -54,4 +54,4 @@ const mapStateTopProps = (state) => {
     };
 }
 
-export default withStyles(styles)(connect(mapStateTopProps)(BlogList));
+export default withStyles(styles)(connect(mapStateToProps)(BlogList));

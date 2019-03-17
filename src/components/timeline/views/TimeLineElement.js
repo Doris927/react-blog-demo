@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Button } from '@material-ui/core';
 require('./TimeLine.css');
 
 class TimeLineElement extends Component{
@@ -8,7 +7,7 @@ class TimeLineElement extends Component{
        return(
         <div className="cd-timeline-block">
             <div className="cd-timeline-img cd-picture">
-                <img src="http://i2.bvimg.com/678757/485f5abad5a3ceac.png" alt="Picture"/>
+                <img src="imgs/time_fill.png" alt="Picture"/>
             </div>
             <div className="cd-timeline-content">
                 <h2>{title}</h2>

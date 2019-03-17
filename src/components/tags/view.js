@@ -1,36 +1,8 @@
 import React, {Component} from 'react';
 import Typography from '@material-ui/core/Typography';
-
-const tags = [
-    {
-        tag:'All',
-        style:{
-            background:'#ffffff',
-            color:'black'
-        }
-    },
-    {
-        tag:'Hobby',
-        style:{
-            background:'#92a4ef',
-            color:'black'
-        }
-    },
-    {
-        tag:'Life',
-        style:{
-            background:'#fc8a9f',
-            color:'black'
-        }
-    },
-    {
-        tag:'Study',
-        style:{
-            background:'#006b75',
-            color:'white'
-        }
-    }
-];
+import {connect} from "react-redux";
+import * as Status from "./status";
+import * as tagsActions from "./actions";
 
 const btnStyle={
     display: 'inline-block',
@@ -64,24 +36,65 @@ const contenStyles={
 
 
 class Tags extends Component{
-    render(){
-        return(
-            <div>
-                <div>
-                    <div style={{...titleStyles}}>
-                        TAG
-                    </div>
-                    <div style={{...contenStyles}}>
-                        {
-                            tags.map((item) => (
-                                <button key={item.tag} style={{...btnStyle,...item.style}}>{item.tag}</button>
-                            ))
-                        }
-                    </div>
-                </div>
-            </div>
-        );
+
+    componentDidMount() {
+        //const defaultPage = 'page1';
+        this.props.onLoad();
     }
+
+    render(){
+        const {status} = this.props;
+        switch (status){
+            case Status.LOADING:
+                return <div>Loading...</div>;
+            case Status.SUCCESS:
+                const{tags} = this.props;
+                return(
+                    <div>
+                        <div>
+                            <div style={{...titleStyles}}>
+                                TAG
+                            </div>
+                            <div style={{...contenStyles}}>
+                                {
+                                    tags.map((item) => (
+                                        <button key={item.id} style={{...btnStyle,background:'#'+item.color}}>{item.name}</button>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                );
+            case Status.FAILURE:
+                return <div>Failure</div>;
+            default:{
+                throw new Error('unexpected status ' + status);
+            }
+        }
+    }
+
+
+
+
 }
 
-export default Tags;
+const mapStateToProps = (state) => {
+    const tags = state.tags;
+    //console.log(state);
+
+    return {
+        tags: tags.data,
+        status: tags.status
+    };
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onLoad: () => {
+           dispatch(tagsActions.fetchTags());
+        }
+    }
+};
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Tags);

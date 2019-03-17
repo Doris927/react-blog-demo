@@ -20,7 +20,7 @@ import {view as Article} from '../components/article/article';
 //import CommentList from '../components/article/comments/views/commentList';
 import CommentTimeLine from '../components/article/timeline/views/CommentTimeline';
 import Tags from '../components/tags/view'
-import Archives from '../components/Archives/view'
+import Archives from '../components/archives/view'
 
 const styles = theme => ({
     layout: {

@@ -6,8 +6,6 @@ import {setPage} from './actions'
 
 import { withStyles } from '@material-ui/core/styles';
 import {Fab, Toolbar} from "@material-ui/core";
-import Icon from '@material-ui/core/Icon';
-import red from "@material-ui/core/colors/red";
 
 require('./view.css');
 
