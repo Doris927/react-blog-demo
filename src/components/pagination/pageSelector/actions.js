@@ -1,7 +1,6 @@
-import {SETPAGE} from "./actionType";
+import {SET_PAGE} from "./actionTypes";
 
 export const setPage = (page) => ({
-    type:SETPAGE,
-    page:page
+    type:SET_PAGE,
+    current:page
 });
-

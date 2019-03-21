@@ -42,11 +42,13 @@ class BlogList extends Component{
         }
 
     }
+
+
 }
 
 const mapStateToProps = (state) => {
     const blogs = state.blogList;
-    //console.log(state);
+    console.log("blog status:"+blogs.status);
 
     return {
         blogs: blogs.data,

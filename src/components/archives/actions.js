@@ -1,4 +1,4 @@
-import {FETCH_STARTED, FETCH_SUCCESS, FETCH_FAILURE} from "./actionTypes";
+import {FETCH_STARTED, FETCH_SUCCESS, FETCH_FAILURE, SET_ARCHIVE} from "./actionTypes";
 
 export const fetchArchivesStarted = () =>({
     type: FETCH_STARTED
@@ -12,6 +12,11 @@ export const fetchArchivesSuccess  = (result) => ({
 export const fetchArchivesFailure = (error) => ({
     type: FETCH_FAILURE,
     error
+});
+
+export const setArchive = (archive) => ({
+    type: SET_ARCHIVE,
+    archive
 });
 
 export const fetchArchives = () => {

@@ -103,7 +103,6 @@ const social = ['GitHub', 'Twitter', 'Facebook'];
 class Blog extends Component{
     render(){
         const {classes} = this.props;
-        console.log(this.props.match.url);
         return (
             <div>
                 <Grid container spacing={40} className={classes.layout}>
@@ -117,7 +116,6 @@ class Blog extends Component{
                     {/* End main content */}
                     {/* Sidebar */}
                     <Grid item xs={12} md={4}>
-                        <Tags/>
                         <Archives/>
                     </Grid>
                     {/* End sidebar */}

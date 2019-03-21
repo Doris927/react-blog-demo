@@ -5,7 +5,7 @@ import {actions as blogListActions} from '../blogList/'
 import {setPage} from './actions'
 
 import { withStyles } from '@material-ui/core/styles';
-import {Fab, Toolbar} from "@material-ui/core";
+import {Toolbar} from "@material-ui/core";
 
 require('./view.css');
 
@@ -39,18 +39,21 @@ class PageSelector extends React.Component {
 
     componentDidMount() {
         //const defaultPage = 'page1';
-        this.props.onSelectPage(defaultPage);
+
+        this.props.onSelectPage(defaultPage,null);
     }
 
     setUp(){
         console.log(this.props.current);
         const lastPage = this.props.current-1;
-        this.props.onSelectPage(lastPage);
+        const {archive} = this.props;
+        this.props.onSelectPage(lastPage, archive);
     }
 
     setNext(){
         const nextPage = this.props.current+1;
-        this.props.onSelectPage(nextPage);
+        const {archive}  = this.props
+        this.props.onSelectPage(nextPage, archive);
     }
 
 
@@ -79,9 +82,6 @@ class PageSelector extends React.Component {
                         Page {current} of {amountPage}
                     </span>
                 </div>
-                {/*<button onClick={this.setUp}>Last</button>*/}
-                {/*<button onClick={this.setNext}>Next</button>*/}
-                {/*<div>{this.props.current}/{this.props.amountPage}, pageSize:{this.props.pageSize}</div>*/}
             </Toolbar>
 
         );
@@ -93,20 +93,19 @@ PageSelector.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-    console.log(state);
     const {current,amount,pageSize} = state.pageInfo;
+    console.log("amount:"+amount+", current:"+current)
     return{
         current: current,
         amountPage:Math.ceil(amount/pageSize),
-        pageSize: pageSize
+        pageSize: pageSize,
     }
 }
 
 const mapDispatchToProps = (dispatch) => {
-    console.log(dispatch);
     return {
         onSelectPage: (page) => {
-            dispatch(setPage(page));
+            dispatch(setPage(page))
             dispatch(blogListActions.fetchBlog(page));
         }
     }

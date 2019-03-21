@@ -1,4 +1,4 @@
-import {FETCH_STARTED, FETCH_SUCCESS, FETCH_FAILURE} from "./actionTypes";
+import {FETCH_STARTED, FETCH_SUCCESS, FETCH_FAILURE, SET_ARCHIVE} from "./actionTypes";
 
 export const fetchBlogStarted = () =>({
     type: FETCH_STARTED
@@ -14,10 +14,17 @@ export const fetchBlogFailure = (error) => ({
     error
 });
 
-export const fetchBlog = (page) => {
-    return (dispatch) => {
+
+export const fetchBlog = (page=1, archive=null) => {
+    return (dispatch,getState) => {
         //const apiUrl = `/data/page${page}.json`;
-        const apiUrl = `https://api.github.com/repos/tammytangg/react-blog-demo/issues?page=${page}&per_page=5`;
+        console.log("test:"+getState().archives.archive);
+        archive=getState().archives.archive;
+        let apiUrl = `https://api.github.com/repos/tammytangg/react-blog-demo/issues?page=${page}&per_page=5`;
+        if(archive!=null){
+            apiUrl = `https://api.github.com/repos/tammytangg/react-blog-demo/issues?milestone=${archive}&page=${page}&per_page=5`;
+        }
+
 
         dispatch(fetchBlogStarted())
 
@@ -37,3 +44,4 @@ export const fetchBlog = (page) => {
         })
     };
 }
+
